@@ -1,0 +1,160 @@
+body {
+    margin: 50px;
+    background-color: #83c5be;
+}
+.modal-container {
+    position: absolute;
+    bottom: 50px;
+    right: 50px;
+    z-index: 1;
+}
+.modal-open-button {
+    background-color: #006d77;
+    display: inline-flex;
+    border-radius: 50%;
+    padding: 15px;
+    cursor: pointer;
+    user-select: none;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 1;
+}
+.modal-form {
+    display: flex;
+    flex-direction: column;
+    background-color: #ffddd2;
+    padding: 30px;
+    border-radius: 20px;
+    margin: 0 25px 25px 0;
+}
+.modal-form h4 {
+    margin: 0 0 16px;
+    color: #e29578;
+    text-align: center;
+    font-size: 1.5rem;
+}
+.modal-form form{
+    display: flex;
+    flex-direction: column;
+}
+.modal-form form input {
+    padding: 10px;
+    margin-bottom: 10px;
+    outline: none;
+    border: none;
+    width: 300px;
+    border-radius: 2px;
+    font-size: 1rem;
+}
+
+.modal-form form button {
+    padding: 10px;
+    outline: none;
+    border:none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #e29578;
+    color: #edf6f9;
+    font-size: 1rem;
+}
+.main-container {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    height: 80vh;
+}
+
+.main-container  > div {
+    width: 100%;
+    flex-basis: 45%;
+    overflow-y: scroll;
+    position: relative;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: column;
+}
+.main-container  > div > div {
+    width: 100%;
+    margin-top: 10px;
+}
+.task.accordian {
+    background-color: #edf6f9;
+    padding: 10px;
+    border-radius: 5px;
+    user-select: none;
+    cursor: pointer;
+}
+
+.accordian-trigger {
+    margin-right: 10px;
+}
+.clear-task {
+    background: #006d77;
+    border: none;
+    padding: 5px 10px;
+    color: #fff;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    width: 100px;
+    box-shadow: 0px 0px 15px #fff;
+    margin: 20px auto;
+    display: block;
+}
+.task-actions {
+    position: absolute;
+    right: -50px;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 20px;
+    display: flex;
+    gap: 5px;
+}
+.task.accordian h4{
+    font-size: 20px;
+    font-weight: 900;
+    margin: 0 50px 0 0;
+    position: relative;
+    display: flex;
+}
+
+.task.accordian .accordian-body {
+    font-size: 12px;
+    margin-bottom: 0;
+    padding: 5px 10px;
+}
+.completed-task-wrap {
+    background: #edf6f9;
+    padding: 10px;
+    border-radius: 10px;
+}
+.completed-task-wrap > div.task.completed h4{
+    display: flex;
+    justify-content:space-between;
+    border: 1px solid;
+    padding: 10px;
+    margin: 0px;
+    align-items: center;
+}
+.main-container  > div .Heading {
+    position: sticky;
+    top: 10px;
+    width: 100%;
+    text-align: center;
+    background: #fff;
+    padding: 15px 0;
+    margin: 0 0 10px;
+    box-shadow: 0px 0px 5px #0004;
+}
+.completed-task-wrap .remove-task {
+    cursor: pointer;
+}
+@media screen and (max-width: 767px){
+    .main-container {
+        flex-direction: column-reverse;
+    }
+    .main-container  > div {
+        width: 100%;
+    }
+}
